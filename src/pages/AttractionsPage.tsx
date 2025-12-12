@@ -1,31 +1,39 @@
 import { useState } from 'react';
-import { useQuery } from '@tanstack/react-query';
 import { Clock, Ruler, Zap, Filter, MapPin, Star } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
+// Mock data for static deployment
+const mockZones = [
+  { id: 'adventure', name: 'Adventure Zone' },
+  { id: 'fantasy', name: 'Fantasy Kingdom' },
+  { id: 'water', name: 'Water World' },
+  { id: 'kids', name: 'Kids Paradise' },
+  { id: 'safari', name: 'Safari Land' },
+];
+
+const mockAttractions = [
+  { id: '1', name: 'Dragon Coaster', zoneId: 'adventure', type: 'roller_coaster', waitTime: 25, heightReq: 120, thrillLevel: 5, status: 'open', rating: 4.8 },
+  { id: '2', name: 'Space Launch', zoneId: 'adventure', type: 'roller_coaster', waitTime: 30, heightReq: 140, thrillLevel: 5, status: 'open', rating: 4.9 },
+  { id: '3', name: 'Thunder Mountain', zoneId: 'adventure', type: 'roller_coaster', waitTime: 20, heightReq: 110, thrillLevel: 4, status: 'open', rating: 4.7 },
+  { id: '4', name: 'Enchanted Castle', zoneId: 'fantasy', type: 'dark_ride', waitTime: 15, heightReq: 0, thrillLevel: 2, status: 'open', rating: 4.5 },
+  { id: '5', name: 'Magic Carousel', zoneId: 'fantasy', type: 'family', waitTime: 10, heightReq: 0, thrillLevel: 1, status: 'open', rating: 4.3 },
+  { id: '6', name: 'River Rapids', zoneId: 'water', type: 'water_ride', waitTime: 20, heightReq: 100, thrillLevel: 3, status: 'open', rating: 4.6 },
+  { id: '7', name: 'Wave Pool', zoneId: 'water', type: 'water_ride', waitTime: 0, heightReq: 0, thrillLevel: 2, status: 'open', rating: 4.4 },
+  { id: '8', name: 'Kiddie Cars', zoneId: 'kids', type: 'family', waitTime: 5, heightReq: 0, thrillLevel: 1, status: 'open', rating: 4.2 },
+  { id: '9', name: 'Mini Train', zoneId: 'kids', type: 'family', waitTime: 10, heightReq: 0, thrillLevel: 1, status: 'open', rating: 4.4 },
+  { id: '10', name: 'Safari Express', zoneId: 'safari', type: 'family', waitTime: 15, heightReq: 0, thrillLevel: 2, status: 'open', rating: 4.7 },
+];
+
 export default function AttractionsPage() {
   const [selectedZone, setSelectedZone] = useState<string>('all');
   const [selectedType, setSelectedType] = useState<string>('all');
 
-  const { data: zones } = useQuery({
-    queryKey: ['zones'],
-    queryFn: async () => {
-      const res = await fetch('/api/park/zones');
-      return res.json();
-    },
-  });
-
-  const { data: attractionsData, isLoading } = useQuery({
-    queryKey: ['attractions'],
-    queryFn: async () => {
-      const res = await fetch('/api/attractions');
-      return res.json();
-    },
-  });
-
-  const attractions = attractionsData?.attractions || [];
+  // Use mock data - no API calls
+  const zones = mockZones;
+  const attractions = mockAttractions;
+  const isLoading = false;
 
   const filteredAttractions = attractions.filter((a: any) => {
     if (selectedZone !== 'all' && a.zoneId !== selectedZone) return false;
@@ -67,7 +75,7 @@ export default function AttractionsPage() {
                   className="px-4 py-2 text-sm border border-input rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-ring"
                 >
                   <option value="all">All Zones</option>
-                  {zones?.zones?.map((zone: any) => (
+                  {zones.map((zone: any) => (
                     <option key={zone.id} value={zone.id}>{zone.name}</option>
                   ))}
                 </select>

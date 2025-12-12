@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
 import {
   ArrowRight,
   Clock,
@@ -16,32 +15,29 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
+// Mock data for static deployment
+const mockZones = [
+  { id: 'adventure', name: 'Adventure Zone', description: 'Thrilling rides and experiences', attractions: 6, color: 'bg-red-500' },
+  { id: 'fantasy', name: 'Fantasy Kingdom', description: 'Magical experiences for all ages', attractions: 5, color: 'bg-purple-500' },
+  { id: 'water', name: 'Water World', description: 'Cool off with water attractions', attractions: 4, color: 'bg-blue-500' },
+  { id: 'kids', name: 'Kids Paradise', description: 'Fun for the little ones', attractions: 5, color: 'bg-yellow-500' },
+  { id: 'safari', name: 'Safari Land', description: 'Wildlife encounters', attractions: 3, color: 'bg-green-500' },
+];
+
+const mockAttractions = [
+  { id: '1', name: 'Dragon Coaster', zone: 'Adventure Zone', waitTime: 25, rating: 4.8, thrillLevel: 'extreme' },
+  { id: '2', name: 'Space Launch', zone: 'Adventure Zone', waitTime: 30, rating: 4.9, thrillLevel: 'extreme' },
+  { id: '3', name: 'Enchanted Castle', zone: 'Fantasy Kingdom', waitTime: 15, rating: 4.5, thrillLevel: 'family' },
+  { id: '4', name: 'River Rapids', zone: 'Water World', waitTime: 20, rating: 4.6, thrillLevel: 'moderate' },
+  { id: '5', name: 'Carousel Gardens', zone: 'Kids Paradise', waitTime: 5, rating: 4.3, thrillLevel: 'family' },
+  { id: '6', name: 'Safari Express', zone: 'Safari Land', waitTime: 10, rating: 4.7, thrillLevel: 'family' },
+];
+
 export default function HomePage() {
-  const { data: parkStatus } = useQuery({
-    queryKey: ['parkStatus'],
-    queryFn: async () => {
-      const res = await fetch('/api/park/status');
-      return res.json();
-    },
-  });
-
-  const { data: zones } = useQuery({
-    queryKey: ['zones'],
-    queryFn: async () => {
-      const res = await fetch('/api/park/zones');
-      return res.json();
-    },
-  });
-
-  const { data: attractions } = useQuery({
-    queryKey: ['featuredAttractions'],
-    queryFn: async () => {
-      const res = await fetch('/api/attractions/featured?limit=6');
-      return res.json();
-    },
-  });
-
-  const status = parkStatus?.status;
+  // Mock data - no API calls needed
+  const status = { isOpen: true, closeTime: '22:00' };
+  const zones = mockZones;
+  const attractions = mockAttractions;
 
   const stats = [
     { value: '20+', label: 'Attractions', icon: Star },
@@ -132,7 +128,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {zones?.zones?.map((zone: any) => (
+            {zones.map((zone: any) => (
               <Card
                 key={zone.id}
                 className="group cursor-pointer hover:shadow-lg transition-all duration-200 hover:-translate-y-1"
@@ -174,7 +170,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {attractions?.attractions?.slice(0, 6).map((attraction: any) => (
+            {attractions.slice(0, 6).map((attraction: any) => (
               <Card
                 key={attraction.id}
                 className="group overflow-hidden hover:shadow-lg transition-all duration-200"

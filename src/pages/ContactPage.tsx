@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useMutation } from '@tanstack/react-query';
 import { Phone, Mail, MapPin, MessageCircle, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -14,34 +13,20 @@ export default function ContactPage() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  const contactMutation = useMutation({
-    mutationFn: async (data: typeof formData) => {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(errorData.error || 'Failed to send message');
-      }
-      return res.json();
-    },
-    onSuccess: () => {
-      setSubmitted(true);
-      setError(null);
-      setFormData({ name: '', email: '', subject: 'general', message: '' });
-    },
-    onError: (err: Error) => {
-      setError(err.message);
-    },
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
-    contactMutation.mutate(formData);
+    setIsSubmitting(true);
+
+    // Mock form submission
+    setTimeout(() => {
+      setSubmitted(true);
+      setError(null);
+      setFormData({ name: '', email: '', subject: 'general', message: '' });
+      setIsSubmitting(false);
+    }, 1000);
   };
 
   const contactInfo = [
@@ -204,11 +189,11 @@ export default function ContactPage() {
 
                       <Button
                         type="submit"
-                        disabled={contactMutation.isPending}
+                        disabled={isSubmitting}
                         className="w-full"
                         size="lg"
                       >
-                        {contactMutation.isPending ? (
+                        {isSubmitting ? (
                           'Sending...'
                         ) : (
                           <>

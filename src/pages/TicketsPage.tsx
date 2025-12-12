@@ -1,10 +1,18 @@
 import { useState, useMemo } from 'react';
-import { useQuery, useMutation } from '@tanstack/react-query';
 import { Check, ArrowLeft, CreditCard, Mail, User, Calendar, ChevronDown, AlertCircle, PartyPopper, Info } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
+
+// Mock ticket data
+const mockTicketTypes = [
+  { id: 'day-pass', name: 'Day Pass', description: 'Full day access to all attractions', price: 99, availability: 'available' },
+  { id: 'weekend-pass', name: 'Weekend Pass', description: '2-day access (Sat & Sun)', price: 179, availability: 'available' },
+  { id: 'family-pack', name: 'Family Pack', description: '2 adults + 2 kids day pass', price: 299, availability: 'available' },
+  { id: 'vip-pass', name: 'VIP Experience', description: 'Skip-the-line + premium parking', price: 199, availability: 'limited' },
+  { id: 'annual-pass', name: 'Annual Pass', description: 'Unlimited visits for 1 year', price: 599, availability: 'available' },
+];
 
 interface PaymentForm {
   cardNumber: string;
@@ -30,16 +38,10 @@ export default function TicketsPage() {
   });
   const [paymentError, setPaymentError] = useState<string | null>(null);
   const [purchaseResult, setPurchaseResult] = useState<any>(null);
+  const [isPurchasing, setIsPurchasing] = useState(false);
 
-  const { data: ticketTypesData } = useQuery({
-    queryKey: ['ticketTypes'],
-    queryFn: async () => {
-      const res = await fetch('/api/tickets/types');
-      return res.json();
-    },
-  });
-
-  const ticketTypes = ticketTypesData?.ticketTypes || [];
+  // Use mock data - no API calls
+  const ticketTypes = mockTicketTypes;
 
   const selectedTicketData = useMemo(() => {
     return ticketTypes.find((t: any) => t.id === selectedTicket);
@@ -63,37 +65,28 @@ export default function TicketsPage() {
     return cleaned;
   };
 
-  const purchaseMutation = useMutation({
-    mutationFn: async () => {
-      const res = await fetch('/api/tickets/purchase', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ticketTypeId: selectedTicket,
-          quantity,
-          visitDate,
-          guestEmail: paymentForm.email,
-          payment: {
-            method: 'card',
-            cardNumber: paymentForm.cardNumber.replace(/\s/g, ''),
-            cardExpiry: paymentForm.cardExpiry,
-            cardCvv: paymentForm.cardCvv,
-            cardHolder: paymentForm.cardHolder,
-          },
-        }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Purchase failed');
-      return data;
-    },
-    onSuccess: (data) => {
-      setPurchaseResult(data);
+  // Mock purchase function
+  const handlePurchase = () => {
+    setIsPurchasing(true);
+    setPaymentError(null);
+
+    // Simulate API call
+    setTimeout(() => {
+      // Mock successful purchase
+      const mockResult = {
+        success: true,
+        confirmationCode: 'TK' + Math.random().toString(36).substring(2, 8).toUpperCase(),
+        ticketType: selectedTicketData?.name,
+        quantity,
+        visitDate,
+        total,
+        email: paymentForm.email,
+      };
+      setPurchaseResult(mockResult);
       setStep('success');
-    },
-    onError: (error: Error) => {
-      setPaymentError(error.message);
-    },
-  });
+      setIsPurchasing(false);
+    }, 1500);
+  };
 
   const handleProceedToDetails = () => {
     if (selectedTicket) {
@@ -110,7 +103,7 @@ export default function TicketsPage() {
 
   const handleCompletePurchase = () => {
     setPaymentError(null);
-    purchaseMutation.mutate();
+    handlePurchase();
   };
 
   const resetPurchase = () => {
@@ -396,12 +389,12 @@ export default function TicketsPage() {
 
               <Button
                 onClick={handleCompletePurchase}
-                disabled={purchaseMutation.isPending || !paymentForm.email || !paymentForm.cardHolder || !paymentForm.cardNumber || !paymentForm.cardExpiry || !paymentForm.cardCvv}
+                disabled={isPurchasing || !paymentForm.email || !paymentForm.cardHolder || !paymentForm.cardNumber || !paymentForm.cardExpiry || !paymentForm.cardCvv}
                 className="w-full"
                 size="lg"
                 variant="accent"
               >
-                {purchaseMutation.isPending ? 'Processing...' : `Pay RM ${total.toFixed(2)}`}
+                {isPurchasing ? 'Processing...' : `Pay RM ${total.toFixed(2)}`}
               </Button>
 
               <p className="text-xs text-muted-foreground text-center">
