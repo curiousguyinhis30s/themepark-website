@@ -1,0 +1,116 @@
+{
+  "common": {
+    "language": "Bahasa",
+    "buyTickets": "Beli Tiket",
+    "learnMore": "Ketahui Lebih",
+    "viewAll": "Lihat Semua",
+    "select": "Pilih",
+    "download": "Muat Turun"
+  },
+  "nav": {
+    "home": "Utama",
+    "attractions": "Tarikan",
+    "zones": "Zon",
+    "tickets": "Tiket",
+    "planVisit": "Rancang Lawatan",
+    "demo": "Cuba Demo",
+    "contact": "Hubungi"
+  },
+  "demo": {
+    "badge": "Demo Interaktif",
+    "title": "Cuba Sebelum Melawat",
+    "subtitle": "Alami platform digital kami secara langsung. Terokai aplikasi mudah alih untuk pelawat atau portal pengurusan untuk pentadbiran taman.",
+    "mobileApp": "Aplikasi Mudah Alih",
+    "mobileDesc": "Alami aplikasi pelawat - tempah tiket, sertai barisan maya, dan navigasi taman",
+    "adminPortal": "Portal Pentadbir",
+    "portalDesc": "Terokai papan pemuka pengurusan - kawal tarikan, lihat analitik, dan banyak lagi",
+    "fullscreen": "Skrin Penuh",
+    "exitFullscreen": "Keluar Skrin Penuh",
+    "openNew": "Buka di Tab Baru",
+    "feature1Title": "Sepenuhnya Interaktif",
+    "feature1Desc": "Navigasi, klik, dan terokai seperti sebenar",
+    "feature2Title": "Data Sebenar",
+    "feature2Desc": "Dimuat dengan sampel tarikan, tiket, dan tempahan",
+    "feature3Title": "Tanpa Log Masuk",
+    "feature3Desc": "Terus masuk - akaun demo sudah disediakan",
+    "buyTickets": "Sedia Melawat? Beli Tiket",
+    "contact": "Hubungi Jualan"
+  },
+  "hero": {
+    "openToday": "Buka hari ini sehingga 10:00 malam",
+    "title": "Pengembaraan menanti di",
+    "titleHighlight": "Theme Park Malaysia",
+    "subtitle": "10 tarikan menarik merentasi 5 zon bertema. Keseronokan keluarga, permainan menarik, dan pengalaman tidak dapat dilupakan.",
+    "planVisit": "Rancang Lawatan Anda"
+  },
+  "info": {
+    "parkHours": "Waktu Taman",
+    "parkHoursValue": "10 PG - 10 MLM",
+    "location": "Lokasi",
+    "locationValue": "Kuala Lumpur",
+    "from": "Dari",
+    "fromValue": "RM 99/dewasa",
+    "nextEvent": "Acara Seterusnya",
+    "nextEventValue": "20 Dis"
+  },
+  "attractions": {
+    "title": "Tarikan Kami",
+    "subtitle": "Dari permainan menegangkan hingga pengembaraan keluarga yang ajaib, temui pengalaman kegemaran anda yang seterusnya.",
+    "featured": "Tarikan Pilihan",
+    "featuredSubtitle": "Pengalaman wajib cuba di taman",
+    "filters": "Tapis",
+    "allZones": "Semua Zon",
+    "allTypes": "Semua Jenis",
+    "waitTime": "min",
+    "count": "tarikan"
+  },
+  "zones": {
+    "title": "Terokai Zon Kami",
+    "subtitle": "5 dunia bertema unik untuk diterokai",
+    "attractions": "tarikan"
+  },
+  "tickets": {
+    "title": "Beli Tiket",
+    "subtitle": "Pilih pas yang sempurna untuk pengembaraan anda. Semua tiket termasuk akses tanpa had ke tarikan.",
+    "dayPass": "Pas Harian",
+    "dayPassDesc": "Akses sepanjang hari ke semua tarikan",
+    "weekendPass": "Pas Hujung Minggu",
+    "weekendPassDesc": "Akses 2 hari (Sabtu & Ahad)",
+    "familyPack": "Pakej Keluarga",
+    "familyPackDesc": "2 dewasa + 2 kanak-kanak pas harian",
+    "vipExperience": "Pengalaman VIP",
+    "vipExperienceDesc": "Tanpa beratur + tempat letak kereta premium",
+    "annualPass": "Pas Tahunan",
+    "annualPassDesc": "Lawatan tanpa had selama 1 tahun",
+    "perPerson": "/orang",
+    "faq": "Soalan Lazim",
+    "faq1": "Bolehkah saya membatalkan tiket saya?",
+    "faq2": "Adakah tiket sah untuk tarikh tertentu?",
+    "faq3": "Apa yang termasuk dengan Express Queue?",
+    "faq4": "Adakah kanak-kanak bawah 3 tahun percuma?"
+  },
+  "app": {
+    "title": "Langkau barisan dengan Virtual Queue",
+    "subtitle": "Muat turun aplikasi kami untuk menempah tempat dalam barisan, semak masa menunggu, dan navigasi taman dengan mudah.",
+    "downloadIOS": "Muat Turun untuk iOS",
+    "downloadAndroid": "Muat Turun untuk Android"
+  },
+  "cta": {
+    "title": "Bersedia untuk pengembaraan?",
+    "subtitle": "Tempah tiket anda dan cipta kenangan yang kekal.",
+    "button": "Dapatkan Tiket"
+  },
+  "footer": {
+    "tagline": "Destinasi keluarga utama Malaysia. Mencipta kenangan sejak 2024.",
+    "visit": "Lawatan",
+    "parkHours": "Waktu Taman",
+    "gettingHere": "Cara Ke Sini",
+    "parking": "Tempat Letak Kereta",
+    "experience": "Pengalaman",
+    "contact": "Hubungi",
+    "copyright": "© 2024 Theme Park Sdn Bhd. Hak cipta terpelihara.",
+    "privacy": "Privasi",
+    "terms": "Terma",
+    "cookies": "Kuki"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "common": {
+    "language": "Language",
+    "buyTickets": "Buy Tickets",
+    "learnMore": "Learn More",
+    "viewAll": "View all",
+    "select": "Select",
+    "download": "Download"
+  },
+  "nav": {
+    "home": "Home",
+    "attractions": "Attractions",
+    "zones": "Zones",
+    "tickets": "Tickets",
+    "planVisit": "Plan Visit",
+    "demo": "Try Demo",
+    "contact": "Contact"
+  },
+  "demo": {
+    "badge": "Interactive Demo",
+    "title": "Try Before You Visit",
+    "subtitle": "Experience our digital platform firsthand. Explore the mobile app for visitors or the admin portal for park management.",
+    "mobileApp": "Mobile App",
+    "mobileDesc": "Experience the visitor app - book tickets, join virtual queues, and navigate the park",
+    "adminPortal": "Admin Portal",
+    "portalDesc": "Explore the management dashboard - control attractions, view analytics, and more",
+    "fullscreen": "Fullscreen",
+    "exitFullscreen": "Exit Fullscreen",
+    "openNew": "Open in New Tab",
+    "feature1Title": "Fully Interactive",
+    "feature1Desc": "Navigate, click, and explore just like the real thing",
+    "feature2Title": "Real Data",
+    "feature2Desc": "Pre-loaded with sample attractions, tickets, and bookings",
+    "feature3Title": "No Login Required",
+    "feature3Desc": "Jump right in - demo accounts are already set up",
+    "buyTickets": "Ready to Visit? Buy Tickets",
+    "contact": "Contact Sales"
+  },
+  "hero": {
+    "openToday": "Open today until 10:00 PM",
+    "title": "Adventure awaits at",
+    "titleHighlight": "Theme Park Malaysia",
+    "subtitle": "10 exciting attractions across 5 themed zones. Family fun, thrilling rides, and unforgettable experiences.",
+    "planVisit": "Plan Your Visit"
+  },
+  "info": {
+    "parkHours": "Park Hours",
+    "parkHoursValue": "10 AM - 10 PM",
+    "location": "Location",
+    "locationValue": "Kuala Lumpur",
+    "from": "From",
+    "fromValue": "RM 99/adult",
+    "nextEvent": "Next Event",
+    "nextEventValue": "Dec 20"
+  },
+  "attractions": {
+    "title": "Our Attractions",
+    "subtitle": "From heart-pounding thrill rides to magical family adventures, discover your next favorite experience.",
+    "featured": "Featured Attractions",
+    "featuredSubtitle": "Must-try experiences at the park",
+    "filters": "Filters",
+    "allZones": "All Zones",
+    "allTypes": "All Types",
+    "waitTime": "min",
+    "count": "attractions"
+  },
+  "zones": {
+    "title": "Explore Our Zones",
+    "subtitle": "5 uniquely themed worlds to discover",
+    "attractions": "attractions"
+  },
+  "tickets": {
+    "title": "Buy Tickets",
+    "subtitle": "Choose the perfect pass for your adventure. All tickets include unlimited access to attractions.",
+    "dayPass": "Day Pass",
+    "dayPassDesc": "Full day access to all attractions",
+    "weekendPass": "Weekend Pass",
+    "weekendPassDesc": "2-day access (Sat & Sun)",
+    "familyPack": "Family Pack",
+    "familyPackDesc": "2 adults + 2 kids day pass",
+    "vipExperience": "VIP Experience",
+    "vipExperienceDesc": "Skip-the-line + premium parking",
+    "annualPass": "Annual Pass",
+    "annualPassDesc": "Unlimited visits for 1 year",
+    "perPerson": "/person",
+    "faq": "Frequently Asked Questions",
+    "faq1": "Can I cancel my tickets?",
+    "faq2": "Are tickets valid for specific dates?",
+    "faq3": "What's included with Express Queue?",
+    "faq4": "Are children under 3 free?"
+  },
+  "app": {
+    "title": "Skip the lines with Virtual Queue",
+    "subtitle": "Download our app to book your spot in line, check wait times, and navigate the park with ease.",
+    "downloadIOS": "Download for iOS",
+    "downloadAndroid": "Download for Android"
+  },
+  "cta": {
+    "title": "Ready for adventure?",
+    "subtitle": "Book your tickets and create memories that last.",
+    "button": "Get Tickets"
+  },
+  "footer": {
+    "tagline": "Malaysia's premier family destination. Creating memories since 2024.",
+    "visit": "Visit",
+    "parkHours": "Park Hours",
+    "gettingHere": "Getting Here",
+    "parking": "Parking",
+    "experience": "Experience",
+    "contact": "Contact",
+    "copyright": "© 2024 Theme Park Sdn Bhd. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies"
+  }
+}

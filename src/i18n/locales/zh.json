@@ -1,0 +1,116 @@
+{
+  "common": {
+    "language": "语言",
+    "buyTickets": "购买门票",
+    "learnMore": "了解更多",
+    "viewAll": "查看全部",
+    "select": "选择",
+    "download": "下载"
+  },
+  "nav": {
+    "home": "首页",
+    "attractions": "游乐设施",
+    "zones": "园区",
+    "tickets": "门票",
+    "planVisit": "规划行程",
+    "demo": "体验演示",
+    "contact": "联系我们"
+  },
+  "demo": {
+    "badge": "互动演示",
+    "title": "游玩前先体验",
+    "subtitle": "亲身体验我们的数字平台。探索游客移动应用或乐园管理门户。",
+    "mobileApp": "移动应用",
+    "mobileDesc": "体验游客应用 - 预订门票、加入虚拟排队、导航乐园",
+    "adminPortal": "管理门户",
+    "portalDesc": "探索管理仪表板 - 控制游乐设施、查看分析数据等",
+    "fullscreen": "全屏",
+    "exitFullscreen": "退出全屏",
+    "openNew": "在新标签页打开",
+    "feature1Title": "完全互动",
+    "feature1Desc": "像真实操作一样导航、点击和探索",
+    "feature2Title": "真实数据",
+    "feature2Desc": "预装游乐设施、门票和预订样本数据",
+    "feature3Title": "无需登录",
+    "feature3Desc": "直接开始 - 演示账户已设置好",
+    "buyTickets": "准备好游玩了吗？购买门票",
+    "contact": "联系销售"
+  },
+  "hero": {
+    "openToday": "今日开放至晚上10点",
+    "title": "冒险等待您在",
+    "titleHighlight": "马来西亚主题乐园",
+    "subtitle": "5个主题区域10个精彩游乐设施。家庭乐趣、刺激游乐设施和难忘体验。",
+    "planVisit": "规划您的行程"
+  },
+  "info": {
+    "parkHours": "开放时间",
+    "parkHoursValue": "上午10点 - 晚上10点",
+    "location": "位置",
+    "locationValue": "吉隆坡",
+    "from": "起价",
+    "fromValue": "RM 99/成人",
+    "nextEvent": "下次活动",
+    "nextEventValue": "12月20日"
+  },
+  "attractions": {
+    "title": "我们的游乐设施",
+    "subtitle": "从心跳加速的刺激游乐设施到神奇的家庭冒险，发现您下一个最喜欢的体验。",
+    "featured": "精选游乐设施",
+    "featuredSubtitle": "乐园必玩体验",
+    "filters": "筛选",
+    "allZones": "所有园区",
+    "allTypes": "所有类型",
+    "waitTime": "分钟",
+    "count": "个设施"
+  },
+  "zones": {
+    "title": "探索我们的园区",
+    "subtitle": "5个独特主题世界等您发现",
+    "attractions": "个设施"
+  },
+  "tickets": {
+    "title": "购买门票",
+    "subtitle": "为您的冒险选择完美的通行证。所有门票包含无限制游玩。",
+    "dayPass": "日票",
+    "dayPassDesc": "全天畅玩所有设施",
+    "weekendPass": "周末票",
+    "weekendPassDesc": "2天通行证（周六和周日）",
+    "familyPack": "家庭套票",
+    "familyPackDesc": "2成人 + 2儿童日票",
+    "vipExperience": "VIP体验",
+    "vipExperienceDesc": "免排队 + 高级停车位",
+    "annualPass": "年票",
+    "annualPassDesc": "一年无限次入园",
+    "perPerson": "/人",
+    "faq": "常见问题",
+    "faq1": "可以取消门票吗？",
+    "faq2": "门票是否只限特定日期使用？",
+    "faq3": "快速通道包含什么？",
+    "faq4": "3岁以下儿童免费吗？"
+  },
+  "app": {
+    "title": "使用虚拟排队跳过队伍",
+    "subtitle": "下载我们的应用预约排队位置、查看等待时间，轻松导航乐园。",
+    "downloadIOS": "iOS下载",
+    "downloadAndroid": "Android下载"
+  },
+  "cta": {
+    "title": "准备好冒险了吗？",
+    "subtitle": "立即预订门票，创造持久回忆。",
+    "button": "获取门票"
+  },
+  "footer": {
+    "tagline": "马来西亚首选家庭目的地。自2024年以来创造回忆。",
+    "visit": "参观",
+    "parkHours": "开放时间",
+    "gettingHere": "如何到达",
+    "parking": "停车",
+    "experience": "体验",
+    "contact": "联系",
+    "copyright": "© 2024 Theme Park Sdn Bhd. 版权所有。",
+    "privacy": "隐私政策",
+    "terms": "条款",
+    "cookies": "Cookie政策"
+  }
+}
