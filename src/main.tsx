@@ -19,6 +19,8 @@ import TermsPage from './pages/TermsPage';
 import CookiePolicyPage from './pages/CookiePolicyPage';
 import LoginPage from './pages/LoginPage';
 import DemoPage from './pages/DemoPage';
+import AdminPortalPage from './pages/AdminPortalPage';
+import MobileAppPage from './pages/MobileAppPage';
 import Layout from './components/Layout';
 
 const queryClient = new QueryClient();
@@ -26,8 +28,10 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <Routes>
-      {/* Login page without layout */}
+      {/* Standalone pages without layout */}
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/admin" element={<AdminPortalPage />} />
+      <Route path="/mobile" element={<MobileAppPage />} />
 
       {/* Main app with layout */}
       <Route path="/" element={<Layout />}>
