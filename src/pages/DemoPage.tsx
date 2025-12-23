@@ -6,10 +6,10 @@ import { Button } from '@/components/ui/button';
 export default function DemoPage() {
   const { t } = useTranslation();
 
-  // Demo URLs - deployed instances
+  // Demo URLs - subpages of main site
   const demoUrls = {
-    mobile: 'https://tp-mobile.sami.now',
-    portal: 'https://tp-admin.sami.now',
+    mobile: 'https://tp.sami.now/mobile',
+    portal: 'https://tp.sami.now/admin',
   };
 
   // Mobile app features
